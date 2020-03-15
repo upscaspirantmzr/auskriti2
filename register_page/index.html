@@ -1,0 +1,419 @@
+<!DOCTYPE HTML>
+<!--
+	Transitive by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+			<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
+		<title>Register</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+                <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Open+Sans" rel="stylesheet">
+		<link rel="stylesheet" href="assets/css/main.css" />
+               
+	</head>
+	<body style="background-color:rgba(30, 30, 30, 1);">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="logo"><a href="../index.html">Impetus 19.0 </a></div>
+				<a href="#menu" class="toggle"><span>Menu</span></a>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="../index.html">Home</a></li>
+					<li><a href="../about/index.html">About</a></li>
+					<li><a href="../events/index.html">Events</a></li>
+                                        <li><a href="../register_page/index.html">Register</a></li>
+                                        <li><a href="../gallery/index.html">Gallery</a></li>
+                                        <li><a href="../Sponsors/index.html">Sponsors</a></li>
+                                        <li><a href="../reachUs/index.html">Reach Us</a></li>
+        								<li><a href="http://www.epsilonhunt.in/">Epsilon</a></li>
+				</ul>
+			</nav>
+		 
+			<br>
+			<br>
+			<br>
+
+			<!-- <center>
+			
+			<img src="images/banner-final.jpeg" alt="Please come and vist our college and register!!" style="width:75%;">
+		</center> -->
+
+		<!--	<section id="banner">
+				<div class="inner">
+					<h1>Impetus 2k19</h1>
+					<p>UVCE's Biggest Technical Fest<br /> <br />
+					<a href="#Countdown_Timer" class="button special scrolly">Know More</a>
+				</div>
+			</section> -->
+                
+                <!-- Countdown Timer -->
+                <!--
+               <section id ="Countdown_Timer" class="wrapper style2">
+                    <div class="inner">
+                        <div class="box">
+                            <div class="content">
+                                <header class="align-center">
+                                <h2>Countdown</h2>
+                                </header>
+                            </div>
+                        </div>
+                    </div>
+                </section> -->
+                
+
+		<!-- One -->
+			<section id="one" class="wrapper style2">
+				<div class="inner">
+					<div>
+						<div class="box">
+							<div class="image fit" style="background-color:#1E1E1E;">
+                                    
+								<center><img src="images/Register-01.svg" alt="" style="width:50%;"/></center>
+                                                                
+							</div>
+							<div class="content">
+								<header class="align-center">
+									<h2>Register Now!</h2>
+									<p>Please fill in the details given below to register for the events.</p>
+								</header>
+								<hr />
+							
+								<form id="registerSubmit" action="https://yourpaymentgateway.com" method="GET">
+									<div id="devent">
+											<div class="select-wrapper">
+												<select name="event_id" id="event_id" onChange="costFunc(this);" required>
+													<option value="">- Event -</option>
+													<option value="RobIT">RobIT</option>
+													<option value="CodeStorm">CodeStorm</option>
+													<option value="Summit" disabled>Summit</option>
+													<option value="Lazer Tag">Lazer Tag</option>
+													<option value="Mock Placement">Mock Placement</option>
+													<option value="Line Seguidor">Line Seguidor</option>
+													<option value="Web Development">Web Development</option>
+													<!-- <!-- <option value="Tech Roadies">Tech Roadies</option>  -->
+													<option value="FusionEra">FusionEra</option>
+													<option value="Technocrat">Technocrat</option>
+													<option value="Dare Devil">Dare Devil</option>
+													<option value="RFID Hunt">RFID Hunt</option>
+													<option value="Electronoob">Electronoob</option>
+													<option value="Mechronin">Mechronin</option>
+													<option value="Civitek">Civitek</option>
+													<option value="Tech Explore">Tech Explore</option>
+													<option value="Hercode Poirot">Hercode Poirot</option>
+													<option value="Vaksamara">Vaksamara</option>
+													<option value="Business As Usual ">Business As Usual </option>
+													<option value="Dota 2">Dota 2</option>
+													<option value="CS: GO">CS: GO</option>
+													<option value="Need for speed MW">Need for speed MW</option>
+													<option value="FIFA 18">FIFA 18</option>
+													<option value="Camera ‘con’cious">Camera ‘con’cious</option>
+
+
+												</select>
+											</div>
+									</div>
+									<br>
+									<div id="dname1">
+										<input type="text" name="name" id="name"  placeholder="Team Member 1's Name"  pattern ="^[a-zA-Z\s.]+.{3,}$" required  onkeyup="costFunc(this);"/>
+									</div>
+									<br>
+                                    <div id="dphNo">
+										<input type="text" name="mobile" id="mobile" placeholder="Team Contact Number '9000990009'"  pattern="\d{10}" required/>
+									</div>
+									<br>
+									<div id="demail">
+										<input type="email" name="email" id="email"  placeholder="Team Email Id" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required/>
+									</div>
+									<br id="br2">
+									<div id="dname2">
+										<input type="text" name="name2" id="name2"  placeholder="Team Member 2's Name " pattern ="^[a-zA-Z\s.]+.{3,}$" onkeyup="costFunc(this);"/>
+									</div>
+									<br>
+									<div id="dname3">
+										<input type="text" name="name3" id="name3" placeholder="Team Member 3's Name" pattern ="^[a-zA-Z\s.]+.{3,}$" onkeyup="costFunc(this);"/>
+									</div>
+									<br id="br3">
+									<div id="dname4">
+										<input type="text" name="name4" id="name4"  placeholder="Team Member 4's Name" pattern ="^[a-zA-Z\s.]+.{3,}$" onkeyup="costFunc(this);"/>
+									</div>
+									<br id="br4">
+									<div id="dname5" hidden>
+										<input type="text" name="name5" id="name5"  placeholder="Team Member 5's Name" pattern ="^[a-zA-Z\s.]+.{3,}$" onkeyup="costFunc(this);" hidden/>
+									</div>
+									<br id="br5" hidden>
+									<div id="dcollege" >
+										<input type="text" name="college" id="college"  placeholder="College Name"  pattern ="^[a-zA-Z\s.]+$"  onkeyup="costFunc(this);" required/>
+									</div>
+									<br>
+									<div id="dqty">
+											<label for="lqty">Quantity:&nbsp&nbsp  </label>
+											<input type="text" name="qty" id="qty"  value="0" style="background:#FFFFFF;border:none;" readonly/>
+										</div>
+										<br>
+									<div id="damount">
+											<label for="lampunt" >Approximate Amount to be paid:&nbsp&nbsp  </label>
+											<input type="text" name="amount" id="amount"  value="0" style="background:#FFFFFF;border:none;"  readonly/>
+									</div>
+									<br>
+									<div id="dreg_btn">
+										<!-- <!----onclick="apiCall()" -->
+										<strong><span style='color: white;'><input type="submit" value="Register"  class="button fit">r</span></strong>
+                                        
+                                         </div>
+									</div>
+
+								</form>				
+									
+						</div>
+						
+					</div>
+				</div>
+			</section>
+
+		
+
+	<!-- Social-contacts -->
+    <div class="social-icons">
+        <a href="https://www.facebook.com/impetusuvce" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://twitter.com/ieeeuvce" target="_blank">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/ieeeuvce/" target="_blank"> 
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.youtube.com/channel/UCt9I0q7BzuuRBcJKvMcdpow" target="_blank">
+            <i class="fab fa-youtube"></i>
+        </a>
+    </div>
+		<!-- Footer -->
+			<footer id="footer">
+				
+                            <br>
+					<div class="copyright" style='background-color: rgba(30, 30, 30, 1);'>
+						&copy; IEEE UVCE : <a href="http://ieeeuvce.in/">ieeeuvce.in</a>
+					</div>
+				
+			</footer>
+                
+                
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script >
+			// function costFunc() {
+			// 	var yourSelect = document.getElementById( "event_id" );
+			// 	var eventSelected = yourSelect.options[ yourSelect.selectedIndex ].text;
+			// 	  c=0;
+			// 	  console.log(eventSelected);
+			// 	if( eventSelected=='Business As Usual'){ //max 4
+			// 		document.getElementById('name2').style.display = 'block ';
+			// 		document.getElementById('name3').style.display = 'block ';
+			// 		document.getElementById('name4').style.display = 'block ';
+			// 		document.getElementById('br2').style.display = 'block ';
+			// 		document.getElementById('br3').style.display = 'block ';
+			// 		document.getElementById('br4').style.display = 'block ';
+			// 		document.getElementById('dname5').hidden = true;
+			// 		document.getElementById('br5').hidden = true;
+			// 		document.getElementById('name5').value = "";
+			// 		document.getElementById('name3').required = false;
+			// 		document.getElementById('name4').required = false;
+			// 		document.getElementById('name5').required = false;
+			// 	}
+			// 	else if(eventSelected=="Summit" || eventSelected=="Web Development"){//max3
+			// 		document.getElementById('name2').style.display = 'block ';
+			// 		document.getElementById('name3').style.display = 'block ';
+			// 		document.getElementById('name4').style.display = 'none ';
+			// 		document.getElementById('name4').value = "";
+			// 		document.getElementById('br2').style.display = 'block ';
+			// 		document.getElementById('br3').style.display = 'block ';
+			// 		document.getElementById('br4').style.display = 'none ';
+			// 		document.getElementById('dname5').hidden = true;
+			// 		document.getElementById('br5').hidden = true;
+			// 		document.getElementById('name2').required = false;
+			// 		document.getElementById('name3').required = false;
+			// 		document.getElementById('name4').required = false;
+			// 		document.getElementById('name5').required = false;
+			// 	}
+			// 	else if(eventSelected=="Mock Placement" || eventSelected=="Epsilon" || eventSelected=="Dare Devil" || eventSelected=='Vaksamara' || eventSelected=='FIFA 18' || eventSelected=='Need for speed MW'){//max 1
+			// 		document.getElementById('name2').style.display = 'none ';
+			// 		document.getElementById('name2').value = "";
+			// 		document.getElementById('name3').style.display = 'none ';
+			// 		document.getElementById('name3').value = "";
+			// 		document.getElementById('name4').style.display = 'none ';
+			// 		document.getElementById('name4').value = "";
+			// 		document.getElementById('br2').style.display = 'none ';
+			// 		document.getElementById('br3').style.display = 'none ';
+			// 		document.getElementById('br4').style.display = 'none ';
+			// 		document.getElementById('dname5').hidden = true;
+			// 		document.getElementById('br5').hidden = true;
+			// 		document.getElementById('name2').required = false;
+			// 		document.getElementById('name3').required = false;
+			// 		document.getElementById('name4').required = false;
+			// 		document.getElementById('name5').required = false;
+			// 		document.getElementById('name5').value = "";
+			// 	}
+			// 	else if(eventSelected=="RobIT" || eventSelected=="Mechronin"  || eventSelected=="Line Seguidor" || eventSelected=="Tech Explore"){//min 3 max4
+			// 		document.getElementById('name2').style.display = 'block ';
+			// 		document.getElementById('name3').style.display = 'block ';
+			// 		document.getElementById('name4').style.display = 'block ';
+			// 		document.getElementById('br2').style.display = 'block ';
+			// 		document.getElementById('br3').style.display = 'block ';
+			// 		document.getElementById('br4').style.display = 'block ';
+			// 		document.getElementById('name2').required = true;
+			// 		document.getElementById('name3').required = true;
+			// 		document.getElementById('dname5').hidden = true;
+			// 		document.getElementById('br5').hidden = true;
+			// 		document.getElementById('name4').required = false;
+			// 		document.getElementById('name5').required = false;
+			// 		document.getElementById('name5').value = "";
+			// 	}
+			// 	// else if(eventSelected=="Tech Roadies"){	//tech roadies registerations
+			// 	// 	window.location.href='http://bit.ly/TechRoadies2019';
+			// 	// }
+			// 	else if(eventSelected=='FusionEra' || eventSelected=='Technocrat' || eventSelected=='RFID Hunt' || eventSelected=='Hercode Poirot' || eventSelected=="CodeStorm"){//min  2 max 3
+			// 		document.getElementById('name2').style.display = 'block ';
+			// 		document.getElementById('name3').style.display = 'block ';
+			// 		document.getElementById('name4').style.display = 'none ';
+			// 		document.getElementById('name4').value = "";
+			// 		document.getElementById('br2').style.display = 'block ';
+			// 		document.getElementById('dname5').hidden = true;
+			// 		document.getElementById('br5').hidden = true;
+			// 		document.getElementById('br3').style.display = 'block ';
+			// 		document.getElementById('br4').style.display = 'none ';
+			// 		document.getElementById('name2').required = true;
+			// 		document.getElementById('name3').required = false;
+			// 		document.getElementById('name4').required = false;
+			// 		document.getElementById('name5').required = false;
+			// 		document.getElementById('name5').value = "";
+			// 	}
+			// 	else if(eventSelected=='Electronoob' || eventSelected=='Civitek'){//min 2 max 2
+			// 		document.getElementById('name2').style.display = 'block ';
+			// 		document.getElementById('name3').style.display = 'none ';
+			// 		document.getElementById('name4').style.display = 'none ';
+			// 		document.getElementById('name4').value = "";
+			// 		document.getElementById('name3').value = "";
+			// 		document.getElementById('br2').style.display = 'block ';
+			// 		document.getElementById('dname5').hidden = true;
+			// 		document.getElementById('br5').hidden = true;
+			// 		document.getElementById('br3').style.display = 'none ';
+			// 		document.getElementById('br4').style.display = 'none ';
+			// 		document.getElementById('name2').required = true;
+			// 		document.getElementById('name3').required = false;
+			// 		document.getElementById('name4').required = false;
+			// 		document.getElementById('name5').required = false;
+			// 		document.getElementById('name5').value = "";
+			// 	}
+			// 	else if(eventSelected=="Camera ‘con’cious"){//min 2 max 4
+			// 		document.getElementById('name2').style.display = 'block ';
+			// 		document.getElementById('name3').style.display = 'block ';
+			// 		document.getElementById('name4').style.display = 'block ';
+			// 		document.getElementById('br2').style.display = 'block ';
+			// 		document.getElementById('dname5').hidden = true;
+			// 		document.getElementById('br5').hidden = true;
+			// 		document.getElementById('br3').style.display = 'block ';
+			// 		document.getElementById('br4').style.display = 'block ';
+			// 		document.getElementById('name2').required = true;
+			// 		document.getElementById('name3').required = false;
+			// 		document.getElementById('name4').required = false;
+			// 		document.getElementById('name5').required = false;
+			// 		document.getElementById('name5').value = "";
+
+			// 	}
+			// 	else if(eventSelected == 'CS: GO' || eventSelected == 'Dota 2'){//min 5 
+			// 		document.getElementById('name2').style.display = 'block ';
+			// 		document.getElementById('name3').style.display = 'block ';
+			// 		document.getElementById('name4').style.display = 'block ';
+			// 		document.getElementById('br2').style.display = 'block ';
+			// 		document.getElementById('br3').style.display = 'block ';
+			// 		document.getElementById('br4').style.display = 'block ';
+			// 		document.getElementById('dname5').removeAttribute("hidden");
+			// 		document.getElementById('br5').removeAttribute("hidden");
+			// 		document.getElementById('name2').required = true;
+			// 		document.getElementById('name3').required = true;
+			// 		document.getElementById('name4').required = true;
+			// 		document.getElementById('name5').required = true;
+
+			// 	}
+			// 	else if(eventSelected =='Lazer Tag'){ //min4 max 4
+			// 		document.getElementById('name2').style.display = 'block ';
+			// 		document.getElementById('name3').style.display = 'block ';
+			// 		document.getElementById('name4').style.display = 'block ';
+			// 		document.getElementById('br2').style.display = 'block ';
+			// 		document.getElementById('br3').style.display = 'block ';
+			// 		document.getElementById('br4').style.display = 'block ';
+			// 		document.getElementById('dname5').hidden = true;
+			// 		document.getElementById('br5').hidden = true;
+			// 		document.getElementById('name2').required = true;
+			// 		document.getElementById('name3').required = true;
+			// 		document.getElementById('name4').required = true;
+			// 		document.getElementById('name5').required = false;
+			// 		document.getElementById('name5').value = "";
+			// 		console.log("Lazertag");
+
+			// 	}
+				
+
+
+
+
+
+			// 	if (document.getElementById('name').value != "" ){
+			// 		c++;
+			// 		document.getElementById('qty').value = c;
+			// 	}
+			// 	if (document.getElementById('name2').value != ""){
+			// 		c++;
+			// 		document.getElementById('qty').value = c;
+			// 	}
+			// 	if (document.getElementById('name3').value != "" ){
+			// 		c++;
+			// 		document.getElementById('qty').value = c;
+			// 	}
+			// 	if (document.getElementById('name4').value != ""){
+			// 		c++;
+			// 		document.getElementById('qty').value = c;
+			// 	}
+			// 	if (document.getElementById('name5').value != ""){
+			// 		c++;
+			// 		document.getElementById('qty').value = c;
+			// 	}
+			// 	if(eventSelected=="RobIT")
+			// 		document.getElementById("amount").value = 30*c;
+			// 	else if(eventSelected=="CodeStorm")
+			// 		document.getElementById("amount").value = 30*c;
+			// 	else if(eventSelected=="Summit")
+			// 		document.getElementById("amount").value = 0*c;
+			// 	else if(eventSelected=="Lazer Tag")
+			// 		document.getElementById("amount").value = 70*c;
+			// 	else if(eventSelected=="Mock Placement")
+			// 		document.getElementById("amount").value = 30*c;
+			// 	else if(eventSelected=="Line Seguidor")
+			// 		document.getElementById("amount").value = 30*c;
+			// 	else if(eventSelected=="Epsilon")
+			// 		document.getElementById("amount").value = 0*c;
+			// 	else if(eventSelected=="Web Development" || eventSelected =="Business As Usual" || eventSelected =="Technocrat" || eventSelected =="Dare Devil" || eventSelected=="RFID Hunt" || eventSelected =="FusionEra" || eventSelected=="Electronoob" || eventSelected=="Mechronin" || eventSelected=="Civitek" || eventSelected=="Tech Explore"|| eventSelected=="Tech Explore" || eventSelected=="Hercode Poirot" || eventSelected=="Vaksamara" || eventSelected=="Business As Usual" || eventSelected=="Dota 2" ||eventSelected=="CS: GO" ||eventSelected=="Need for speed MW" ||eventSelected=="FIFA 18" || eventSelected=="Camera ‘con’cious" )
+			// 		document.getElementById("amount").value = 30*c;
+			
+		
+		
+			// }
+			// </script>
+			</body>
+			</html>
+		
