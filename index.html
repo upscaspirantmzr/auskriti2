@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+  <title>Impetus 19.0</title>
+  <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <style>
+    h2{
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1e1e1d;
+  font-size:1000px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+html,body,div,span,h2{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;}
+html,body{ 
+  width:100%;
+  height:100%;
+  background:#000;
+}
+#particles-js{
+  width: 100%;
+  height: 80%;
+  background-color: #000000;
+  background-image: url('assets/images/title.svg');
+  background-size: 50%;
+  background-position: 50% 25%;
+  background-repeat: no-repeat;
+}
+.countdown {
+    font-size: 30px;
+    display: flex;
+   
+    animation: timer-down 2s ease-in 7s;
+    animation-fill-mode: both;
+}
+.countdown div {
+    padding: 15px 20px;
+    border: 2px solid #f96c0d;
+    border-radius: 10px;
+	color: white;
+    background-color: black;
+    opacity: 0.8;
+    margin: 3px;
+  
+}
+.countdown span {
+    display: block;
+    font-size: 15px;
+}
+.countdown1{
+	width:40%;
+ 
+}
+#center-countdown{
+   height:20%;
+}
+/*h1::after{
+  content: '';
+  background: #efefef;
+  display: block; 
+  height: 3px;
+  width: 250px;
+  margin: 5px auto 5px;
+}*/
+/* <!-countdown for mobile screens> */
+@media screen and (max-width: 500px) {
+  #particles-js{
+    width: 100%;
+    height: 60%;
+    background-color: #000000;
+    background-image: url('assets/images/title.svg');
+    background-size: 80%;
+    background-position: 50% 25%;
+    background-repeat: no-repeat;
+}
+.countdown {
+    font-size: 20px;
+    display: flex;  
+    animation: timer-down 2s ease-in 7s;
+    animation-fill-mode: both;
+    width: 100%;
+}
+.countdown div {
+   
+    border: 2px solid #f96c0d;
+	border-radius: 10px;
+	color: white;
+    background-color: black;
+	opacity: 0.8;
+  width: 100%;
+}
+.countdown span {
+    display: block;
+	font-size: 10px;
+	text-align: center;
+
+}
+.countdown1{
+	width:100%;
+  margin: 5px;
+  padding: 5%;
+	
+}
+#center-countdown{
+   height:40%;
+}
+}
+
+  </style>
+  
+</head>
+<body>
+
+
+<!-- Header -->
+<header id="header" class="alt">
+    <a href="#menu" class="toggle"><span>Menu</span></a>
+</header>
+
+<!-- Nav -->
+<nav id="menu">
+    <ul class="links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about/index.html">About</a></li>
+        <li><a href="events/index.html">Events</a></li>
+        <li><a href="register_page/index.html">Register</a></li>
+        <li><a href="gallery/index.html">Gallery</a></li>
+        <li><a href="Sponsors/index.html">Sponsors</a></li>
+        <li><a href="reachUs/index.html">Reach Us</a></li>
+        <li><a href="http://www.epsilonhunt.in/">Epsilon</a></li>
+    </ul>
+</nav>
+
+<!-- particles.js container -->
+<div style="height:100%">
+    <div id="particles-js"></div>
+    <center id ="center-countdown" >
+        <div class="countdown1">
+            <div class="countdown"></div>
+
+        </div>
+    </center>                   
+  </div>
+<!-- scripts -->
+ <!-- Scripts -->
+ <script src="assets/js/jquery.min.js"></script>
+ <script src="assets/js/jquery.scrolly.min.js"></script>
+ <script src="assets/js/jquery.scrollex.min.js"></script>
+ <script src="assets/js/skel.min.js"></script>
+ <script src="assets/js/util.js"></script>
+ <script src="assets/js/main.js"></script>
+<script src="assets/js/particles.js"></script>
+<script src="assets/js/app.js"></script>
+<script>
+	const countdown = document.querySelector('.countdown');
+
+	// Set Launch Date (ms)
+	const launchDate = new Date('March 22, 2019 09:00:00').getTime();
+
+	// Update every second
+	const intvl = setInterval(() => {
+		// Get todays date and time (ms)
+		const now = new Date().getTime();
+
+		// Distance from now and the launch date (ms)
+		const distance = launchDate - now;
+
+		// Time calculation
+		const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+		const hours = Math.floor(
+			(distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+		);
+		const mins = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+		const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+		// Display result
+		// Display result
+		if (screen.width > 430) {
+			countdown.innerHTML =
+				`
+		<div  style="width: 25%;">${days}<span>&nbsp&nbspDays&nbsp&nbsp</span></div>
+		<div  style="width: 25%;">${hours}<span>&nbspHours&nbsp</span></div>
+		<div  style="width: 25%;">${mins}<span>Minutes</span></div>
+		<div  style="width: 25%;">${seconds}<span>Seconds</span></div>
+	  `;
+		} else {
+			countdown.innerHTML =
+				`
+		<div  style="width: 25%;">${days}<span><center>&nbsp&nbspDays</center></span></div>
+		<div  style="width: 25%;">${hours}<span><center>Hours</center></span></div>
+		<div  style="width: 25%;">${mins}<span><center>Minutes</center></span></div>
+		<div  style="width: 25%;">${seconds}<span><center>Seconds</center></span></div>
+	  `;
+		}
+
+		// If launch date is reached
+		if (distance < 0) {
+			// Stop countdown
+			clearInterval(intvl);
+      document.getElementById('center-countdown').style.display = 'none ';
+      document.getElementById('particles-js').style.height = "100%";
+      document.getElementById('particles-js').style.backgroundSize = "60%";
+		}
+	}, 1000);
+</script>
+
+
+</body>
+</html>
