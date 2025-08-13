@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        /* Custom modal animation */
+        .modal-enter-from, .modal-leave-to {
+            opacity: 0;
+            transform: scale(0.9);
+        }
+        .modal-enter-to, .modal-leave-from {
+            opacity: 1;
+            transform: scale(1);
+        }
+        .modal-enter-active, .modal-leave-active {
+            transition: all 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- Header -->
+    <header id="header" class="bg-gray-800 shadow-lg fixed top-0 w-full z-50 transition-all duration-300">
+        <div class="container mx-auto flex justify-between items-center p-4">
+            <div class="logo">
+                <a href="../index.html" class="text-2xl font-bold text-gray-50 hover:text-indigo-400 transition-colors duration-300">Impetus 19.0</a>
+            </div>
+            <nav id="menu" class="hidden md:block">
+                <ul class="flex space-x-6 text-lg">
+                    <li><a href="../index.html" class="text-gray-300 hover:text-indigo-400 transition-colors duration-300">Home</a></li>
+                    <li><a href="../about/index.html" class="text-gray-300 hover:text-indigo-400 transition-colors duration-300">About</a></li>
+                    <li><a href="../events/index.html" class="text-indigo-400 font-semibold">Events</a></li>
+                    <li><a href="../register_page/index.html" class="text-gray-300 hover:text-indigo-400 transition-colors duration-300">Register</a></li>
+                    <li><a href="../gallery/index.html" class="text-gray-300 hover:text-indigo-400 transition-colors duration-300">Gallery</a></li>
+                    <li><a href="../Sponsors/index.html" class="text-gray-300 hover:text-indigo-400 transition-colors duration-300">Sponsors</a></li>
+                    <li><a href="../reachUs/index.html" class="text-gray-300 hover:text-indigo-400 transition-colors duration-300">Reach Us</a></li>
+                    <li><a href="http://www.epsilonhunt.in/" class="text-gray-300 hover:text-indigo-400 transition-colors duration-300">Epsilon</a></li>
+                </ul>
+            </nav>
+            <button id="menu-toggle" class="md:hidden text-white text-2xl focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 transition-all duration-300 ease-in-out">
+            <ul class="flex flex-col items-center py-4 space-y-2">
+                <li><a href="../index.html" class="text-gray-300 hover:text-indigo-400 block px-4 py-2">Home</a></li>
+                <li><a href="../about/index.html" class="text-gray-300 hover:text-indigo-400 block px-4 py-2">About</a></li>
+                <li><a href="../events/index.html" class="text-indigo-400 font-semibold block px-4 py-2">Events</a></li>
+                <li><a href="../register_page/index.html" class="text-gray-300 hover:text-indigo-400 block px-4 py-2">Register</a></li>
+                <li><a href="../gallery/index.html" class="text-gray-300 hover:text-indigo-400 block px-4 py-2">Gallery</a></li>
+                <li><a href="../Sponsors/index.html" class="text-gray-300 hover:text-indigo-400 block px-4 py-2">Sponsors</a></li>
+                <li><a href="../reachUs/index.html" class="text-gray-300 hover:text-indigo-400 block px-4 py-2">Reach Us</a></li>
+                <li><a href="http://www.epsilonhunt.in/" class="text-gray-300 hover:text-indigo-400 block px-4 py-2">Epsilon</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-24 pb-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h1 class="text-5xl font-extrabold text-white">Events</h1>
+                <p class="mt-4 text-xl text-gray-400">Discover all the exciting events and competitions happening at Impetus 19.0!</p>
+            </div>
+
+            <!-- Event Grid -->
+            <div id="event-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Event Card 1 -->
+                <div class="bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group cursor-pointer" data-modal-target="Modal-1">
+                    <figure class="relative overflow-hidden rounded-t-2xl">
+                        <img src="images/robit5.jpeg" alt="ROBIT" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110" />
+                        <figcaption class="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h2 class="text-2xl font-bold">ROBIT</h2>
+                            <p class="mt-2 text-md">VIEW MORE</p>
+                            <a href="#" class="mt-4 px-6 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full transition-colors duration-300">View more</a>
+                        </figcaption>
+                    </figure>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white">ROBIT</h3>
+                    </div>
+                </div>
+
+                <!-- Event Card 2 -->
+                <div class="bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group cursor-pointer" data-modal-target="Modal-2">
+                    <figure class="relative overflow-hidden rounded-t-2xl">
+                        <img src="images/codestorm2.jpeg" alt="CODESTORM" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110" />
+                        <figcaption class="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h2 class="text-2xl font-bold">CODESTORM</h2>
+                            <p class="mt-2 text-md">VIEW MORE</p>
+                            <a href="#" class="mt-4 px-6 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full transition-colors duration-300">View more</a>
+                        </figcaption>
+                    </figure>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white">CODESTORM</h3>
+                    </div>
+                </div>
+
+                <!-- Event Card 3 -->
+                <div class="bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group cursor-pointer" data-modal-target="Modal-3">
+                    <figure class="relative overflow-hidden rounded-t-2xl">
+                        <img src="images/summit1.jpg" alt="SUMMIT" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110" />
+                        <figcaption class="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h2 class="text-2xl font-bold">SUMMIT</h2>
+                            <p class="mt-2 text-md">VIEW MORE</p>
+                            <a href="#" class="mt-4 px-6 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full transition-colors duration-300">View more</a>
+                        </figcaption>
+                    </figure>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white">SUMMIT</h3>
+                    </div>
+                </div>
+
+                <!-- Event Card 4 -->
+                <div class="bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group cursor-pointer" data-modal-target="Modal-4">
+                    <figure class="relative overflow-hidden rounded-t-2xl">
+                        <img src="images/LazerTag1.jpg" alt="LAZERTAG" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110" />
+                        <figcaption class="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h2 class="text-2xl font-bold">LAZERTAG</h2>
+                            <p class="mt-2 text-md">VIEW MORE</p>
+                            <a href="#" class="mt-4 px-6 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full transition-colors duration-300">View more</a>
+                        </figcaption>
+                    </figure>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white">LAZERTAG</h3>
+                    </div>
+                </div>
+
+                <!-- Event Card 5 -->
+                <div class="bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group cursor-pointer" data-modal-target="Modal-5">
+                    <figure class="relative overflow-hidden rounded-t-2xl">
+                        <img src="images/mockplacement2.jpeg" alt="MOCK PLACEMENT" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110" />
+                        <figcaption class="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h2 class="text-2xl font-bold">MOCK PLACEMENT</h2>
+                            <p class="mt-2 text-md">VIEW MORE</p>
+                            <a href="#" class="mt-4 px-6 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full transition-colors duration-300">View more</a>
+                        </figcaption>
+                    </figure>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white">MOCK PLACEMENT</h3>
+                    </div>
+                </div>
+
+                <!-- Event Card 6 -->
+                <div class="bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group cursor-pointer" data-modal-target="Modal-6">
+                    <figure class="relative overflow-hidden rounded-t-2xl">
+                        <img src="images/lineSeguidor2.jpeg" alt="LINE SEGUIDOR" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110" />
+                        <figcaption class="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h2 class="text-2xl font-bold">LINE SEGUIDOR</h2>
+                            <p class="mt-2 text-md">VIEW MORE</p>
+                            <a href="#" class="mt-4 px-6 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full transition-colors duration-300">View more</a>
+                        </figcaption>
+                    </figure>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white">LINE SEGUIDOR</h3>
+                    </div>
+                </div>
+
+                <!-- Event Card 7 -->
+                <div class="bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group cursor-pointer" data-modal-target="Modal-7">
+                    <figure class="relative overflow-hidden rounded-t-2xl">
+                        <img src="images/epsilon1.jpg" alt="EPSILON" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110" />
+                        <figcaption class="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h2 class="text-2xl font-bold">EPSILON</h2>
+                            <p class="mt-2 text-md">VIEW MORE</p>
+                            <a href="#" class="mt-4 px-6 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full transition-colors duration-300">View more</a>
+                        </figcaption>
+                    </figure>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white">EPSILON</h3>
+                    </div>
+                </div>
+
+                <!-- Event Card 8 -->
+                <div class="bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group cursor-pointer" data-modal-target="Modal-8">
+                    <figure class="relative overflow-hidden rounded-t-2xl">
+                        <img src="images/webathon2.jpeg" alt="WEBATHON" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110" />
+                        <figcaption class="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h2 class="text-2xl font-bold">WEBATHON</h2>
+                            <p class="mt-2 text-md">VIEW MORE</p>
+                            <a href="#" class="mt-4 px-6 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full transition-colors duration-300">View more</a>
+                        </figcaption>
+                    </figure>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white">WEBATHON</h3>
+                    </div>
+                </div>
+
+                <!-- Event Card 9 -->
+                <div class="bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group cursor-pointer" data-modal-target="Modal-9">
+                    <figure class="relative overflow-hidden rounded-t-2xl">
+                        <img src="images/business2.jpg" alt="Business As Usual" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110" />
+                        <figcaption class="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h2 class="text-2xl font-bold">Business As Usual</h2>
+                            <p class="mt-2 text-md">VIEW MORE</p>
+                            <a href="#" class="mt-4 px-6 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full transition-colors duration-300">View more</a>
+                        </figcaption>
+                    </figure>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white">Business As Usual</h3>
+                    </div>
+                </div>
+
+                <!-- Event Card 10 -->
+                <div class="bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group cursor-pointer" data-modal-target="Modal-10">
+                    <figure class="relative overflow-hidden rounded-t-2xl">
+                        <img src="images/Fusionera1.jpeg" alt="FusionEra" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110" />
+                        <figcaption class="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h2 class="text-2xl font-bold">FusionEra</h2>
+                            <p class="mt-2 text-md">VIEW MORE</p>
+                            <a href="#" class="mt-4 px-6 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full transition-colors duration-300">View more</a>
+                        </figcaption>
+                    </figure>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white">FusionEra</h3>
+                    </div>
+                </div>
+
+                <!-- Event Card 11 -->
+                <div class="bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group cursor-pointer" data-modal-target="Modal-11">
+                    <figure class="relative overflow-hidden rounded-t-2xl">
+                        <img src="images/Technocrat1.jpeg" alt="Technocrat" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110" />
+                        <figcaption class="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h2 class="text-2xl font-bold">Technocrat</h2>
+                            <p class="mt-2 text-md">VIEW MORE</p>
+                            <a href="#" class="mt-4 px-6 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full transition-colors duration-300">View more</a>
+                        </figcaption>
+                    </figure>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white">Technocrat</h3>
+                    </div>
+                </div>
+
+                <!-- Event Card 12 -->
+                <div class="bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group cursor-pointer" data-modal-target="Modal-12">
+                    <figure class="relative overflow-hidden rounded-t-2xl">
+                        <img src="images/dare devil1.jpeg" alt="Dare Devil" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110" />
+                        <figcaption class="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h2 class="text-2xl font-bold">Dare Devil</h2>
+                            <p class="mt-2 text-md">VIEW MORE</p>
+                            <a href="#" class="mt-4 px-6 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full transition-colors duration-300">View more</a>
+                        </figcaption>
+                    </figure>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white">Dare Devil</h3>
+                    </div>
+                </div>
+
+                <!-- Event Card 13 -->
+                <div class="bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group cursor-pointer" data-modal-target="Modal-13">
+                    <figure class="relative overflow-hidden rounded-t-2xl">
+                        <img src="images/rfid1.jpeg" alt="RFID Hunt" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110" />
+                        <figcaption class="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h2 class="text-2xl font-bold">RFID Hunt</h2>
+                            <p class="mt-2 text-md">VIEW MORE</p>
+                            <a href="#" class="mt-4 px-6 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full transition-colors duration-300">View more</a>
+                        </figcaption>
+                    </figure>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white">RFID Hunt</h3>
+                    </div>
+                </div>
+
+                <!-- Event Card 14 -->
+                <div class="bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group cursor-pointer" data-modal-target="Modal-14">
+                    <figure class="relative overflow-hidden rounded-t-2xl">
+                        <img src="images/Electronoob2.jpg" alt="Electronoob" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110" />
+                        <figcaption class="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h2 class="text-2xl font-bold">Electronoob</h2>
+                            <p class="mt-2 text-md">VIEW MORE</p>
+                            <a href="#" class="mt-4 px-6 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full transition-colors duration-300">View more</a>
+                        </figcaption>
+                    </figure>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white">Electronoob</h3>
+                    </div>
+                </div>
+
+                <!-- Event Card 15 -->
+                <div class="bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group cursor-pointer" data-modal-target="Modal-15">
+                    <figure class="relative overflow-hidden rounded-t-2xl">
+                        <img src="images/mechronin1.jpeg" alt="Mechronin" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110" />
+                        <figcaption class="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h2 class="text-2xl font-bold">Mechronin</h2>
+                            <p class="mt-2 text-md">VIEW MORE</p>
+                            <a href="#" class="mt-4 px-6 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full transition-colors duration-300">View more</a>
+                        </figcaption>
+                    </figure>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white">Mechronin</h3>
+                    </div>
+                </div>
+
+                <!-- Event Card 16 -->
+                <div class="bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group cursor-pointer" data-modal-target="Modal-16">
+                    <figure class="relative overflow-hidden rounded-t-2xl">
+                        <img src="images/civitek1.jpeg" alt="Civitek" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110" />
+                        <figcaption class="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h2 class="text-2xl font-bold">Civitek</h2>
+                            <p class="mt-2 text-md">VIEW MORE</p>
+                            <a href="#" class="mt-4 px-6 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full transition-colors duration-300">View more</a>
+                        </figcaption>
+                    </figure>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white">Civitek</h3>
+                    </div>
+                </div>
+
+                <!-- Event Card 17 -->
+                <div class="bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group cursor-pointer" data-modal-target="Modal-17">
+                    <figure class="relative overflow-hidden rounded-t-2xl">
+                        <img src="images/gaming1.jpeg" alt="Gaming Tournament" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110" />
+                        <figcaption class="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h2 class="text-2xl font-bold">Gaming Tournament</h2>
+                            <p class="mt-2 text-md">VIEW MORE</p>
+                            <a href="#" class="mt-4 px-6 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full transition-colors duration-300">View more</a>
+                        </figcaption>
+                    </figure>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white">Gaming Tournament</h3>
+                    </div>
+                </div>
+
+                <!-- Event Card 18 -->
+                <div class="bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group cursor-pointer" data-modal-target="Modal-18">
+                    <figure class="relative overflow-hidden rounded-t-2xl">
+                        <img src="images/tech explore1.jpeg" alt="Tech Explore" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110" />
+                        <figcaption class="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h2 class="text-2xl font-bold">Tech Explore</h2>
+                            <p class="mt-2 text-md">VIEW MORE</p>
+                            <a href="#" class="mt-4 px-6 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full transition-colors duration-300">View more</a>
+                        </figcaption>
+                    </figure>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white">Tech Explore</h3>
+                    </div>
+                </div>
+
+                <!-- Event Card 19 -->
+                <div class="bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group cursor-pointer" data-modal-target="Modal-19">
+                    <figure class="relative overflow-hidden rounded-t-2xl">
+                        <img src="images/hercode1.jpeg" alt="Hercode Poirot" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110" />
+                        <figcaption class="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h2 class="text-2xl font-bold">Hercode Poirot</h2>
+                            <p class="mt-2 text-md">VIEW MORE</p>
+                            <a href="#" class="mt-4 px-6 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full transition-colors duration-300">View more</a>
+                        </figcaption>
+                    </figure>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white">Hercode Poirot</h3>
+                    </div>
+                </div>
+
+                <!-- Event Card 20 -->
+                <div class="bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group cursor-pointer" data-modal-target="Modal-20">
+                    <figure class="relative overflow-hidden rounded-t-2xl">
+                        <img src="images/camera_consious3.jpeg" alt="Camera ‘con’cious" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110" />
+                        <figcaption class="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h2 class="text-2xl font-bold">Camera ‘con’cious</h2>
+                            <p class="mt-2 text-md">VIEW MORE</p>
+                            <a href="#" class="mt-4 px-6 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full transition-colors duration-300">View more</a>
+                        </figcaption>
+                    </figure>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white">Camera ‘con’cious</h3>
+                    </div>
+                </div>
+
+                <!-- Event Card 21 -->
+                <div class="bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group cursor-pointer" data-modal-target="Modal-21">
+                    <figure class="relative overflow-hidden rounded-t-2xl">
+                        <img src="images/Vaksamara1.jpg" alt="Vaksamara" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110" />
+                        <figcaption class="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h2 class="text-2xl font-bold">Vaksamara</h2>
+                            <p class="mt-2 text-md">VIEW MORE</p>
+                            <a href="#" class="mt-4 px-6 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full transition-colors duration-300">View more</a>
+                        </figcaption>
+                    </figure>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white">Vaksamara</h3>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Modals -->
+    <!-- Modal 1 -->
+    <div id="Modal-1" class="fixed inset-0 bg-black bg-opacity-70 z-[100] hidden items-center justify-center p-4" aria-labelledby="Modal-label-1" role="dialog">
+        <div class="modal-content-container bg-gray-900 rounded-xl shadow-2xl overflow-hidden max-w-2xl w-full max-h-[90vh] transition-all duration-300 ease-in-out transform scale-95 opacity-0">
+            <div class="modal-header bg-gray-800 p-4 flex justify-between items-center rounded-t-xl">
+                <h4 class="text-2xl font-bold text-white" id="Modal-label-1">ROBIT</h4>
+                <button type="button" class="text-gray-400 hover:text-white transition-colors duration-200" aria-label="Close" data-dismiss="modal">
+                    <span aria-hidden="true" class="text-3xl">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body p-6 overflow-y-auto" style="text-align:justify;">
+                <img src="images/robit5.jpeg" alt="ROBIT" class="w-full rounded-xl mb-4" />
+                <p>It's time to Redefine The Possibilities of your bot; Hey RoboMasters! it's a shout out to you all.
+                <br>How agile is your bot? Can you stand your soil with it? Then get fleet-footed with it to grab the flag and celebrate the victory by planting it on the enemy soil.
+                <br>This Impetus IEEE UVCE presents RobIt. Half the arena is your castle, the other half is your opponent's. Chase the combatant bot to rob the flag at the centre and against its defence plant it on its side of the arena.<br>
+                Excited?!<br>For rules and more info refer the pdf attached.
+                </p>
+                <p class="mt-4">
+                <b>Team size:</b> 3-4<br>
+                <b>Ticket Price:</b> Rs. 30/head<br>
+                <b>1st place:</b> Rs. 5000/-<br>
+                <b>2nd place:</b> Rs. 2500/-
+                </p>
+                <p class="mt-4"><b>ORGANIZERS :</b> <br>
+                Suhas - +91 99868 88608  <br>
+                Anand - +91 97383 98418<br>
+                Mahesh - +91 90356 63465<br>
+                Venkatesh Prasad - +91 94821 67821
+                </p>
+            </div>
+            <div class="modal-footer bg-gray-800 p-4 flex justify-end space-x-4 rounded-b-xl">
+                <a href="http://bit.ly/RobIT-Rules" download="RobitRules" target="_blank">
+                    <button type="button" class="px-6 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-full transition-colors duration-300">Download</button>
+                </a>
+                <a href="../register_page/index.html">
+                    <button type="button" class="px-6 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-full transition-colors duration-300">Register</button>
+                </a>
+                <button type="button" class="px-6 py-2 bg-gray-600 hover:bg-gray-700 text-white font-semibold rounded-full transition-colors duration-300" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal 2 -->
+    <div id="Modal-2" class="fixed inset-0 bg-black bg-opacity-70 z-[100] hidden items-center justify-center p-4" aria-labelledby="Modal-label-2" role="dialog">
+        <div class="modal-content-container bg-gray-900 rounded-xl shadow-2xl overflow-hidden max-w-2xl w-full max-h-[90vh] transition-all duration-300 ease-in-out transform scale-95 opacity-0">
+            <div class="modal-header bg-gray-800 p-4 flex justify-between items-center rounded-t-xl">
+                <h4 class="text-2xl font-bold text-white" id="Modal-label-2">CODESTORM</h4>
+                <button type="button" class="text-gray-400 hover:text-white transition-colors duration-200" aria-label="Close" data-dismiss="modal">
+                    <span aria-hidden="true" class="text-3xl">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body p-6 overflow-y-auto" style="text-align:justify;">
+                <img src="images/codestorm2.jpeg" alt="CODESTORM" class="w-full rounded-xl mb-4" />
+                <p>
+                    CodeStorm is a platform to put your coding skills to the test! Do you have what it takes to belittle the coders around you? If yes, then look no further!
+                    <br>CodeStorm is a team event which consists of 2 rounds :-
+                    <br><br>
+                    <b>Round 1:</b> In this round, the participating teams will have to complete a written test based on various programming concepts. The teams qualifying to the 2nd round will be shortlisted based on the scores obtained by the respective teams in this written round.
+                    <br>
+                    <b>Round 2:</b> In this round, the shortlisted teams would be provided a series of competitive programming challenges and the respective teams will be scored based on the speed and accuracy of their solution.
+                    <br><br>
+                    <b>Note:</b> There is no constraint on the programming language to be used in this event. Any programming language is well accepted.
+                </p>
+                <p class="mt-4">
+                    <b>Max Team Size:</b> 3<br>
+                    <b>Ticket Price:</b> Rs. 30/head<br>
+                    <b>1st place:</b> Rs. 4000/-<br>
+                    <b>2nd place:</b> Rs. 2000/-
+                </p>
+                <p class="mt-4">
+                    <b>ORGANIZERS:</b> <br>
+                    Sriram- +91 88676 09198<br>
+                    Charan- +91 90359 58711<br>
+                    Pooja- +91 70223 87121<br>
+                </p>
+            </div>
+            <div class="modal-footer bg-gray-800 p-4 flex justify-end space-x-4 rounded-b-xl">
+                <a href="../register_page/index.html">
+                    <button type="button" class="px-6 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-full transition-colors duration-300">Register</button>
+                </a>
+                <button type="button" class="px-6 py-2 bg-gray-600 hover:bg-gray-700 text-white font-semibold rounded-full transition-colors duration-300" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div id="Modal-3" class="fixed inset-0 bg-black bg-opacity-70 z-[100] hidden items-center justify-center p-4" aria-labelledby="Modal-label-3" role="dialog">
+        <div class="modal-content-container bg-gray-900 rounded-xl shadow-2xl overflow-hidden max-w-2xl w-full max-h-[90vh] transition-all duration-300 ease-in-out transform scale-95 opacity-0">
+            <div class="modal-header bg-gray-800 p-4 flex justify-between items-center rounded-t-xl">
+                <h4 class="text-2xl font-bold text-white" id="Modal-label-3">SUMMIT</h4>
+                <button type="button" class="text-gray-400 hover:text-white transition-colors duration-200" aria-label="Close" data-dismiss="modal">
+                    <span aria-hidden="true" class="text-3xl">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body p-6 overflow-y-auto" style="text-align:justify;">
+                <img src="images/summit1.jpg" alt="SUMMIT" class="w-full rounded-xl mb-4" />
+                <p>
+                    IEEE UVCE's flagship event Summit has been one of the most interesting events till date and it's now entering the arena with a better version!
+                    Summit is a student parliament where participants present their ideas and views on a certain topic, to the judges and audience.
+                    There will be a panel discussion amongst the renowned panellists and the moderator prior to the rounds of event. There are two rounds and they are as described below.
+                    <br>
+                    <b>ROUND 1:</b>
+                    The participants would be given a problem statement and are expected to come up with interesting solutions and present their ideas along with a ppt. The best ones would make it to the final round.
+                    <br>
+                    <b>ROUND 2:</b>
+                    This would be the final round of the event which is of similar format but with a more challenging problem statement. Judgement would be based on various criteria which would be disclosed later. The students would also be given a problem statement on spot and they are required to present their unique solution for the same without a ppt.
+                </p>
+                <p class="mt-4 font-bold">Registrations are closed!</p>
+                <p class="mt-4">
+                    <b>Team size:</b> 2 or 3 <br>
+                    <b>Ticket Price:</b> Free entry<br>
+                    <b>1st place:</b> Rs. 2500/-<br>
+                    <b>2nd place:</b> Rs. 1000/-
+                </p>
+                <p class="mt-4">
+                    <b>ORGANIZERS:</b> <br>
+                    Priya- +91 90667 74740 <br>
+                    Chinmayi- +91 72046 72567<br>
+                    Darshan- +91 88673 62582<br>
+                    Seema- +91 97433 30895
+                </p>
+            </div>
+            <div class="modal-footer bg-gray-800 p-4 flex justify-end space-x-4 rounded-b-xl">
+                <button type="button" class="px-6 py-2 bg-gray-600 cursor-not-allowed text-white font-semibold rounded-full transition-colors duration-300" disabled>Register</button>
+                <button type="button" class="px-6 py-2 bg-gray-600 hover:bg-gray-700 text-white font-semibold rounded-full transition-colors duration-300" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal 4 -->
+    <div id="Modal-4" class="fixed inset-0 bg-black bg-opacity-70 z-[100] hidden items-center justify-center p-4" aria-labelledby="Modal-label-4" role="dialog">
+        <div class="modal-content-container bg-gray-900 rounded-xl shadow-2xl overflow-hidden max-w-2xl w-full max-h-[90vh] transition-all duration-300 ease-in-out transform scale-95 opacity-0">
+            <div class="modal-header bg-gray-800 p-4 flex justify-between items-center rounded-t-xl">
+                <h4 class="text-2xl font-bold text-white" id="Modal-label-4">LAZER TAG</h4>
+                <button type="button" class="text-gray-400 hover:text-white transition-colors duration-200" aria-label="Close" data-dismiss="modal">
+                    <span aria-hidden="true" class="text-3xl">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body p-6 overflow-y-auto" style="text-align:justify;">
+                <img src="images/LazerTag1.jpg" alt="LAZER TAG" class="w-full rounded-xl mb-4" />
+                <p>Lazer Tag is a fun event where you get to experience a "First Person Shooter" in real life . Each participant will be given a laser gun and a body armour. The participants will have to form a team and compete against the other team. The participants can use the help of obstacles to evade from their opponents and shoot the opponents to gain points for their respective team. At the end of the allotted time, the team with the most number of "kills" wins.</p>
+                <p class="mt-4">
+                    <b>LASER TAG ARENA</b><br>
+                    <b>Team Size:</b> 4<br>
+                    <b>Ticket Price:</b> Rs. 70/head
+                </p>
+                <p class="mt-4"><b>ORGANIZERS:</b><br>
+                    Jerry Allan Akshay - +91 96638 29842<br>
+                    Sandya Shree - +91 82962 30045<br>
+                    Rajat - +91 96868 24746
+                </p>
+            </div>
+            <div class="modal-footer bg-gray-800 p-4 flex justify-end space-x-4 rounded-b-xl">
+                <a href="../register_page/index.html">
+                    <button type="button" class="px-6 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-full transition-colors duration-300">Register</button>
+                </a>
+                <button type="button" class="px-6 py-2 bg-gray-600 hover:bg-gray-700 text-white font-semibold rounded-full transition-colors duration-300" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal 5 -->
+    <div id="Modal-5" class="fixed inset-0 bg-black bg-opacity-70 z-[100] hidden items-center justify-center p-4" aria-labelledby="Modal-label-5" role="dialog">
+        <div class="modal-content-container bg-gray-900 rounded-xl shadow-2xl overflow-hidden max-w-2xl w-full max-h-[90vh] transition-all duration-300 ease-in-out transform scale-95 opacity-0">
+            <div class="modal-header bg-gray-800 p-4 flex justify-between items-center rounded-t-xl">
+                <h4 class="text-2xl font-bold text-white" id="Modal-label-5">MOCK PLACEMENT</h4>
+                <button type="button" class="text-gray-400 hover:text-white transition-colors duration-200" aria-label="Close" data-dismiss="modal">
+                    <span aria-hidden="true" class="text-3xl">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body p-6 overflow-y-auto" style="text-align:justify;">
+                <img src="images/mockplacement2.jpeg" alt="MOCK PLACEMENT" class="w-full rounded-xl mb-4" />
+                <p>Mock placement is an exciting brew of one's aptitude test, communication skills, group discussion and knowledge for personal interview. Do you want to take a closer look at the employee placement process?<br> Here is an opportunity to test your employability skills and help yourself entering the graduate job market. What are you waiting for?.. Start building your Resume and know whether you are prepared. Put your skills to test and advance with new excitement in the next level.</p>
+                <p class="mt-4">
+                    <b>Team Size:</b> 1 <br>
+                    <b>Team Price:</b> Rs. 30/-<br>
+                    <b>1st place:</b> Rs. 2000/-<br>
+                    <b>2nd place:</b> Rs. 1000/-<br>
+                </p>
+                <p class="mt-4">
+                    <b>Note:</b><br>
+                    -Cash prize will be given branch wise.<br>
+                    -Cash prize remains the same for ME students.<br>
+                    -Civil and Architecture students will be judged under the same category.
+                </p>
+                <p class="mt-4">
+                    <b>Organisers:</b> <br>
+                    Shruthi - +91 87625 74915<br>
+                    Akash - +91 73493 01390<br>
+                    Anushree - +91 91488 77385
+                </p>
+            </div>
+            <div class="modal-footer bg-gray-800 p-4 flex justify-end space-x-4 rounded-b-xl">
+                <a href="../register_page/index.html">
+                    <button type="button" class="px-6 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-full transition-colors duration-300">Register</button>
+                </a>
+                <button type="button" class="px-6 py-2 bg-gray-600 hover:bg-gray-700 text-white font-semibold rounded-full transition-colors duration-300" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal 6 -->
+    <div id="Modal-6" class="fixed inset-0 bg-black bg-opacity-70 z-[100] hidden items-center justify-center p-4" aria-labelledby="Modal-label-6" role="dialog">
+        <div class="modal-content-container bg-gray-900 rounded-xl shadow-2xl overflow-hidden max-w-2xl w-full max-h-[90vh] transition-all duration-300 ease-in-out transform scale-95 opacity-0">
+            <div class="modal-header bg-gray-800 p-4 flex justify-between items-center rounded-t-xl">
+                <h4 class="text-2xl font-bold text-white" id="Modal-label-6">LINE SEGUIDOR</h4>
+                <button type="button" class="text-gray-400 hover:text-white transition-colors duration-200" aria-label="Close" data-dismiss="modal">
+                    <span aria-hidden="true" class="text-3xl">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body p-6 overflow-y-auto" style="text-align:justify;">
+                <img src="images/lineSeguidor2.jpeg" alt="LINE SEGUIDOR" class="w-full rounded-xl mb-4" />
+                <p>Hola amigos, The robots we build are a reflection of ourselves.<br> Can our reflection follow a line till the end? Does it have the shear determination to cross any terrain?<br> This year IEEE UVCE presents Line Seguidor...</p>
+            </div>
+            <div class="modal-footer bg-gray-800 p-4 flex justify-end space-x-4 rounded-b-xl">
+                <a href="../register_page/index.html">
+                    <button type="button" class="px-6 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-full transition-colors duration-300">Register</button>
+                </a>
+                <button type="button" class="px-6 py-2 bg-gray-600 hover:bg-gray-700 text-white font-semibold rounded-full transition-colors duration-300" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal 7 -->
+    <div id="Modal-7" class="fixed inset-0 bg-black bg-opacity-70 z-[100] hidden items-center justify-center p-4" aria-labelledby="Modal-label-7" role="dialog">
+        <div class="modal-content-container bg-gray-900 rounded-xl shadow-2xl overflow-hidden max-w-2xl w-full max-h-[90vh] transition-all duration-300 ease-in-out transform scale-95 opacity-0">
+            <div class="modal-header bg-gray-800 p-4 flex justify-between items-center rounded-t-xl">
+                <h4 class="text-2xl font-bold text-white" id="Modal-label-7">EPSILON</h4>
+                <button type="button" class="text-gray-400 hover:text-white transition-colors duration-200" aria-label="Close" data-dismiss="modal">
+                    <span aria-hidden="true" class="text-3xl">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body p-6 overflow-y-auto" style="text-align:justify;">
+                <img src="images/epsilon1.jpg" alt="EPSILON" class="w-full rounded-xl mb-4" />
+                <p>...
+                </p>
+            </div>
+            <div class="modal-footer bg-gray-800 p-4 flex justify-end space-x-4 rounded-b-xl">
+                <a href="../register_page/index.html">
+                    <button type="button" class="px-6 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-full transition-colors duration-300">Register</button>
+                </a>
+                <button type="button" class="px-6 py-2 bg-gray-600 hover:bg-gray-700 text-white font-semibold rounded-full transition-colors duration-300" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal 8 -->
+    <div id="Modal-8" class="fixed inset-0 bg-black bg-opacity-70 z-[100] hidden items-center justify-center p-4" aria-labelledby="Modal-label-8" role="dialog">
+        <div class="modal-content-container bg-gray-900 rounded-xl shadow-2xl overflow-hidden max-w-2xl w-full max-h-[90vh] transition-all duration-300 ease-in-out transform scale-95 opacity-0">
+            <div class="modal-header bg-gray-800 p-4 flex justify-between items-center rounded-t-xl">
+                <h4 class="text-2xl font-bold text-white" id="Modal-label-8">WEBATHON</h4>
+                <button type="button" class="text-gray-400 hover:text-white transition-colors duration-200" aria-label="Close" data-dismiss="modal">
+                    <span aria-hidden="true" class="text-3xl">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body p-6 overflow-y-auto" style="text-align:justify;">
+                <img src="images/webathon2.jpeg" alt="WEBATHON" class="w-full rounded-xl mb-4" />
+                <p>...
+                </p>
+            </div>
+            <div class="modal-footer bg-gray-800 p-4 flex justify-end space-x-4 rounded-b-xl">
+                <a href="../register_page/index.html">
+                    <button type="button" class="px-6 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-full transition-colors duration-300">Register</button>
+                </a>
+                <button type="button" class="px-6 py-2 bg-gray-600 hover:bg-gray-700 text-white font-semibold rounded-full transition-colors duration-300" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal 9 -->
+    <div id="Modal-9" class="fixed inset-0 bg-black bg-opacity-70 z-[100] hidden items-center justify-center p-4" aria-labelledby="Modal-label-9" role="dialog">
+        <div class="modal-content-container bg-gray-900 rounded-xl shadow-2xl overflow-hidden max-w-2xl w-full max-h-[90vh] transition-all duration-300 ease-in-out transform scale-95 opacity-0">
+            <div class="modal-header bg-gray-800 p-4 flex justify-between items-center rounded-t-xl">
+                <h4 class="text-2xl font-bold text-white" id="Modal-label-9">Business As Usual</h4>
+                <button type="button" class="text-gray-400 hover:text-white transition-colors duration-200" aria-label="Close" data-dismiss="modal">
+                    <span aria-hidden="true" class="text-3xl">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body p-6 overflow-y-auto" style="text-align:justify;">
+                <img src="images/business2.jpg" alt="Business As Usual" class="w-full rounded-xl mb-4" />
+                <p>...
+                </p>
+            </div>
+            <div class="modal-footer bg-gray-800 p-4 flex justify-end space-x-4 rounded-b-xl">
+                <a href="../register_page/index.html">
+                    <button type="button" class="px-6 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-full transition-colors duration-300">Register</button>
+                </a>
+                <button type="button" class="px-6 py-2 bg-gray-600 hover:bg-gray-700 text-white font-semibold rounded-full transition-colors duration-300" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 10 -->
+    <div id="Modal-10" class="fixed inset-0 bg-black bg-opacity-70 z-[100] hidden items-center justify-center p-4" aria-labelledby="Modal-label-10" role="dialog">
+        <div class="modal-content-container bg-gray-900 rounded-xl shadow-2xl overflow-hidden max-w-2xl w-full max-h-[90vh] transition-all duration-300 ease-in-out transform scale-95 opacity-0">
+            <div class="modal-header bg-gray-800 p-4 flex justify-between items-center rounded-t-xl">
+                <h4 class="text-2xl font-bold text-white" id="Modal-label-10">FusionEra</h4>
+                <button type="button" class="text-gray-400 hover:text-white transition-colors duration-200" aria-label="Close" data-dismiss="modal">
+                    <span aria-hidden="true" class="text-3xl">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body p-6 overflow-y-auto" style="text-align:justify;">
+                <img src="images/Fusionera1.jpeg" alt="FusionEra" class="w-full rounded-xl mb-4" />
+                <p>...
+                </p>
+            </div>
+            <div class="modal-footer bg-gray-800 p-4 flex justify-end space-x-4 rounded-b-xl">
+                <a href="../register_page/index.html">
+                    <button type="button" class="px-6 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-full transition-colors duration-300">Register</button>
+                </a>
+                <button type="button" class="px-6 py-2 bg-gray-600 hover:bg-gray-700 text-white font-semibold rounded-full transition-colors duration-300" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal 11 -->
+    <div id="Modal-11" class="fixed inset-0 bg-black bg-opacity-70 z-[100] hidden items-center justify-center p-4" aria-labelledby="Modal-label-11" role="dialog">
+        <div class="modal-content-container bg-gray-900 rounded-xl shadow-2xl overflow-hidden max-w-2xl w-full max-h-[90vh] transition-all duration-300 ease-in-out transform scale-95 opacity-0">
+            <div class="modal-header bg-gray-800 p-4 flex justify-between items-center rounded-t-xl">
+                <h4 class="text-2xl font-bold text-white" id="Modal-label-11">Technocrat</h4>
+                <button type="button" class="text-gray-400 hover:text-white transition-colors duration-200" aria-label="Close" data-dismiss="modal">
+                    <span aria-hidden="true" class="text-3xl">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body p-6 overflow-y-auto" style="text-align:justify;">
+                <img src="images/Technocrat1.jpeg" alt="Technocrat" class="w-full rounded-xl mb-4" />
+                <p>...
+                </p>
+            </div>
+            <div class="modal-footer bg-gray-800 p-4 flex justify-end space-x-4 rounded-b-xl">
+                <a href="../register_page/index.html">
+                    <button type="button" class="px-6 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-full transition-colors duration-300">Register</button>
+                </a>
+                <button type="button" class="px-6 py-2 bg-gray-600 hover:bg-gray-700 text-white font-semibold rounded-full transition-colors duration-300" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 12 -->
+    <div id="Modal-12" class="fixed inset-0 bg-black bg-opacity-70 z-[100] hidden items-center justify-center p-4" aria-labelledby="Modal-label-12" role="dialog">
+        <div class="modal-content-container bg-gray-900 rounded-xl shadow-2xl overflow-hidden max-w-2xl w-full max-h-[90vh] transition-all duration-300 ease-in-out transform scale-95 opacity-0">
+            <div class="modal-header bg-gray-800 p-4 flex justify-between items-center rounded-t-xl">
+                <h4 class="text-2xl font-bold text-white" id="Modal-label-12">Dare Devil</h4>
+                <button type="button" class="text-gray-400 hover:text-white transition-colors duration-200" aria-label="Close" data-dismiss="modal">
+                    <span aria-hidden="true" class="text-3xl">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body p-6 overflow-y-auto" style="text-align:justify;">
+                <img src="images/dare devil1.jpeg" alt="Dare Devil" class="w-full rounded-xl mb-4" />
+                <p>...
+                </p>
+            </div>
+            <div class="modal-footer bg-gray-800 p-4 flex justify-end space-x-4 rounded-b-xl">
+                <a href="../register_page/index.html">
+                    <button type="button" class="px-6 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-full transition-colors duration-300">Register</button>
+                </a>
+                <button type="button" class="px-6 py-2 bg-gray-600 hover:bg-gray-700 text-white font-semibold rounded-full transition-colors duration-300" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 13 -->
+    <div id="Modal-13" class="fixed inset-0 bg-black bg-opacity-70 z-[100] hidden items-center justify-center p-4" aria-labelledby="Modal-label-13" role="dialog">
+        <div class="modal-content-container bg-gray-900 rounded-xl shadow-2xl overflow-hidden max-w-2xl w-full max-h-[90vh] transition-all duration-300 ease-in-out transform scale-95 opacity-0">
+            <div class="modal-header bg-gray-800 p-4 flex justify-between items-center rounded-t-xl">
+                <h4 class="text-2xl font-bold text-white" id="Modal-label-13">RFID Hunt</h4>
+                <button type="button" class="text-gray-400 hover:text-white transition-colors duration-200" aria-label="Close" data-dismiss="modal">
+                    <span aria-hidden="true" class="text-3xl">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body p-6 overflow-y-auto" style="text-align:justify;">
+                <img src="images/rfid1.jpeg" alt="RFID Hunt" class="w-full rounded-xl mb-4" />
+                <p>...
+                </p>
+            </div>
+            <div class="modal-footer bg-gray-800 p-4 flex justify-end space-x-4 rounded-b-xl">
+                <a href="../register_page/index.html">
+                    <button type="button" class="px-6 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-full transition-colors duration-300">Register</button>
+                </a>
+                <button type="button" class="px-6 py-2 bg-gray-600 hover:bg-gray-700 text-white font-semibold rounded-full transition-colors duration-300" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 14 -->
+    <div id="Modal-14" class="fixed inset-0 bg-black bg-opacity-70 z-[100] hidden items-center justify-center p-4" aria-labelledby="Modal-label-14" role="dialog">
+        <div class="modal-content-container bg-gray-900 rounded-xl shadow-2xl overflow-hidden max-w-2xl w-full max-h-[90vh] transition-all duration-300 ease-in-out transform scale-95 opacity-0">
+            <div class="modal-header bg-gray-800 p-4 flex justify-between items-center rounded-t-xl">
+                <h4 class="text-2xl font-bold text-white" id="Modal-label-14">Electronoob</h4>
+                <button type="button" class="text-gray-400 hover:text-white transition-colors duration-200" aria-label="Close" data-dismiss="modal">
+                    <span aria-hidden="true" class="text-3xl">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body p-6 overflow-y-auto" style="text-align:justify;">
+                <img src="images/Electronoob2.jpg" alt="Electronoob" class="w-full rounded-xl mb-4" />
+                <p>...
+                </p>
+            </div>
+            <div class="modal-footer bg-gray-800 p-4 flex justify-end space-x-4 rounded-b-xl">
+                <a href="../register_page/index.html">
+                    <button type="button" class="px-6 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-full transition-colors duration-300">Register</button>
+                </a>
+                <button type="button" class="px-6 py-2 bg-gray-600 hover:bg-gray-700 text-white font-semibold rounded-full transition-colors duration-300" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 15 -->
+    <div id="Modal-15" class="fixed inset-0 bg-black bg-opacity-70 z-[100] hidden items-center justify-center p-4" aria-labelledby="Modal-label-15" role="dialog">
+        <div class="modal-content-container bg-gray-900 rounded-xl shadow-2xl overflow-hidden max-w-2xl w-full max-h-[90vh] transition-all duration-300 ease-in-out transform scale-95 opacity-0">
+            <div class="modal-header bg-gray-800 p-4 flex justify-between items-center rounded-t-xl">
+                <h4 class="text-2xl font-bold text-white" id="Modal-label-15">Mechronin</h4>
+                <button type="button" class="text-gray-400 hover:text-white transition-colors duration-200" aria-label="Close" data-dismiss="modal">
+                    <span aria-hidden="true" class="text-3xl">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body p-6 overflow-y-auto" style="text-align:justify;">
+                <img src="images/mechronin1.jpeg" alt="Mechronin" class="w-full rounded-xl mb-4" />
+                <p>...
+                </p>
+            </div>
+            <div class="modal-footer bg-gray-800 p-4 flex justify-end space-x-4 rounded-b-xl">
+                <a href="../register_page/index.html">
+                    <button type="button" class="px-6 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-full transition-colors duration-300">Register</button>
+                </a>
+                <button type="button" class="px-6 py-2 bg-gray-600 hover:bg-gray-700 text-white font-semibold rounded-full transition-colors duration-300" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 16 -->
+    <div id="Modal-16" class="fixed inset-0 bg-black bg-opacity-70 z-[100] hidden items-center justify-center p-4" aria-labelledby="Modal-label-16" role="dialog">
+        <div class="modal-content-container bg-gray-900 rounded-xl shadow-2xl overflow-hidden max-w-2xl w-full max-h-[90vh] transition-all duration-300 ease-in-out transform scale-95 opacity-0">
+            <div class="modal-header bg-gray-800 p-4 flex justify-between items-center rounded-t-xl">
+                <h4 class="text-2xl font-bold text-white" id="Modal-label-16">Civitek</h4>
+                <button type="button" class="text-gray-400 hover:text-white transition-colors duration-200" aria-label="Close" data-dismiss="modal">
+                    <span aria-hidden="true" class="text-3xl">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body p-6 overflow-y-auto" style="text-align:justify;">
+                <img src="images/civitek1.jpeg" alt="Civitek" class="w-full rounded-xl mb-4" />
+                <p>...
+                </p>
+            </div>
+            <div class="modal-footer bg-gray-800 p-4 flex justify-end space-x-4 rounded-b-xl">
+                <a href="../register_page/index.html">
+                    <button type="button" class="px-6 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-full transition-colors duration-300">Register</button>
+                </a>
+                <button type="button" class="px-6 py-2 bg-gray-600 hover:bg-gray-700 text-white font-semibold rounded-full transition-colors duration-300" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 17 -->
+    <div id="Modal-17" class="fixed inset-0 bg-black bg-opacity-70 z-[100] hidden items-center justify-center p-4" aria-labelledby="Modal-label-17" role="dialog">
+        <div class="modal-content-container bg-gray-900 rounded-xl shadow-2xl overflow-hidden max-w-2xl w-full max-h-[90vh] transition-all duration-300 ease-in-out transform scale-95 opacity-0">
+            <div class="modal-header bg-gray-800 p-4 flex justify-between items-center rounded-t-xl">
+                <h4 class="text-2xl font-bold text-white" id="Modal-label-17">Gaming Tournament</h4>
+                <button type="button" class="text-gray-400 hover:text-white transition-colors duration-200" aria-label="Close" data-dismiss="modal">
+                    <span aria-hidden="true" class="text-3xl">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body p-6 overflow-y-auto" style="text-align:justify;">
+                <img src="images/gaming1.jpeg" alt="Gaming Tournament" class="w-full rounded-xl mb-4" />
+                <p>...
+                </p>
+            </div>
+            <div class="modal-footer bg-gray-800 p-4 flex justify-end space-x-4 rounded-b-xl">
+                <a href="../register_page/index.html">
+                    <button type="button" class="px-6 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-full transition-colors duration-300">Register</button>
+                </a>
+                <button type="button" class="px-6 py-2 bg-gray-600 hover:bg-gray-700 text-white font-semibold rounded-full transition-colors duration-300" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 18 -->
+    <div id="Modal-18" class="fixed inset-0 bg-black bg-opacity-70 z-[100] hidden items-center justify-center p-4" aria-labelledby="Modal-label-18" role="dialog">
+        <div class="modal-content-container bg-gray-900 rounded-xl shadow-2xl overflow-hidden max-w-2xl w-full max-h-[90vh] transition-all duration-300 ease-in-out transform scale-95 opacity-0">
+            <div class="modal-header bg-gray-800 p-4 flex justify-between items-center rounded-t-xl">
+                <h4 class="text-2xl font-bold text-white" id="Modal-label-18">Tech Explore</h4>
+                <button type="button" class="text-gray-400 hover:text-white transition-colors duration-200" aria-label="Close" data-dismiss="modal">
+                    <span aria-hidden="true" class="text-3xl">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body p-6 overflow-y-auto" style="text-align:justify;">
+                <img src="images/tech explore1.jpeg" alt="Tech Explore" class="w-full rounded-xl mb-4" />
+                <p>...
+                </p>
+            </div>
+            <div class="modal-footer bg-gray-800 p-4 flex justify-end space-x-4 rounded-b-xl">
+                <a href="../register_page/index.html">
+                    <button type="button" class="px-6 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-full transition-colors duration-300">Register</button>
+                </a>
+                <button type="button" class="px-6 py-2 bg-gray-600 hover:bg-gray-700 text-white font-semibold rounded-full transition-colors duration-300" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 19 -->
+    <div id="Modal-19" class="fixed inset-0 bg-black bg-opacity-70 z-[100] hidden items-center justify-center p-4" aria-labelledby="Modal-label-19" role="dialog">
+        <div class="modal-content-container bg-gray-900 rounded-xl shadow-2xl overflow-hidden max-w-2xl w-full max-h-[90vh] transition-all duration-300 ease-in-out transform scale-95 opacity-0">
+            <div class="modal-header bg-gray-800 p-4 flex justify-between items-center rounded-t-xl">
+                <h4 class="text-2xl font-bold text-white" id="Modal-label-19">Hercode Poirot</h4>
+                <button type="button" class="text-gray-400 hover:text-white transition-colors duration-200" aria-label="Close" data-dismiss="modal">
+                    <span aria-hidden="true" class="text-3xl">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body p-6 overflow-y-auto" style="text-align:justify;">
+                <img src="images/hercode1.jpeg" alt="Hercode Poirot" class="w-full rounded-xl mb-4" />
+                <p>...
+                </p>
+            </div>
+            <div class="modal-footer bg-gray-800 p-4 flex justify-end space-x-4 rounded-b-xl">
+                <a href="../register_page/index.html">
+                    <button type="button" class="px-6 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-full transition-colors duration-300">Register</button>
+                </a>
+                <button type="button" class="px-6 py-2 bg-gray-600 hover:bg-gray-700 text-white font-semibold rounded-full transition-colors duration-300" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 20 -->
+    <div id="Modal-20" class="fixed inset-0 bg-black bg-opacity-70 z-[100] hidden items-center justify-center p-4" aria-labelledby="Modal-label-20" role="dialog">
+        <div class="modal-content-container bg-gray-900 rounded-xl shadow-2xl overflow-hidden max-w-2xl w-full max-h-[90vh] transition-all duration-300 ease-in-out transform scale-95 opacity-0">
+            <div class="modal-header bg-gray-800 p-4 flex justify-between items-center rounded-t-xl">
+                <h4 class="text-2xl font-bold text-white" id="Modal-label-20">Camera ‘con’cious</h4>
+                <button type="button" class="text-gray-400 hover:text-white transition-colors duration-200" aria-label="Close" data-dismiss="modal">
+                    <span aria-hidden="true" class="text-3xl">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body p-6 overflow-y-auto" style="text-align:justify;">
+                <img src="images/camera_consious3.jpeg" alt="Camera ‘con’cious" class="w-full rounded-xl mb-4" />
+                <p>...
+                </p>
+            </div>
+            <div class="modal-footer bg-gray-800 p-4 flex justify-end space-x-4 rounded-b-xl">
+                <a href="../register_page/index.html">
+                    <button type="button" class="px-6 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-full transition-colors duration-300">Register</button>
+                </a>
+                <button type="button" class="px-6 py-2 bg-gray-600 hover:bg-gray-700 text-white font-semibold rounded-full transition-colors duration-300" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 21 -->
+    <div id="Modal-21" class="fixed inset-0 bg-black bg-opacity-70 z-[100] hidden items-center justify-center p-4" aria-labelledby="Modal-label-21" role="dialog">
+        <div class="modal-content-container bg-gray-900 rounded-xl shadow-2xl overflow-hidden max-w-2xl w-full max-h-[90vh] transition-all duration-300 ease-in-out transform scale-95 opacity-0">
+            <div class="modal-header bg-gray-800 p-4 flex justify-between items-center rounded-t-xl">
+                <h4 class="text-2xl font-bold text-white" id="Modal-label-21">Vaksamara</h4>
+                <button type="button" class="text-gray-400 hover:text-white transition-colors duration-200" aria-label="Close" data-dismiss="modal">
+                    <span aria-hidden="true" class="text-3xl">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body p-6 overflow-y-auto" style="text-align:justify;">
+                <img src="images/Vaksamara1.jpg" alt="Vaksamara" class="w-full rounded-xl mb-4" />
+                <p>...
+                </p>
+            </div>
+            <div class="modal-footer bg-gray-800 p-4 flex justify-end space-x-4 rounded-b-xl">
+                <a href="../register_page/index.html">
+                    <button type="button" class="px-6 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-full transition-colors duration-300">Register</button>
+                </a>
+                <button type="button" class="px-6 py-2 bg-gray-600 hover:bg-gray-700 text-white font-semibold rounded-full transition-colors duration-300" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer id="footer" class="bg-gray-800 text-gray-400 p-6 text-center">
+        <div class="social-icons mb-4 space-x-4">
+            <a href="https://www.facebook.com/impetusuvce" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300">
+                <i class="fab fa-facebook-f text-2xl"></i>
+            </a>
+            <a href="https://twitter.com/ieeeuvce" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300">
+                <i class="fab fa-twitter text-2xl"></i>
+            </a>
+            <a href="https://www.instagram.com/ieeeuvce/" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300">
+                <i class="fab fa-instagram text-2xl"></i>
+            </a>
+            <a href="https://www.youtube.com/channel/UCt9I0q7BzuuRBcJKvMcdpow" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300">
+                <i class="fab fa-youtube text-2xl"></i>
+            </a>
+        </div>
+        <div class="copyright text-sm">
+            &copy; IEEE UVCE : <a href="http://ieeeuvce.in/" class="hover:text-white transition-colors duration-300">ieeeuvce.in</a>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile Menu Toggle
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (menuToggle) {
+                menuToggle.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+
+            // Modal functionality
+            const modals = document.querySelectorAll('[id^="Modal-"]');
+            const eventCards = document.querySelectorAll('[data-modal-target]');
+
+            eventCards.forEach(card => {
+                card.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = card.dataset.modalTarget;
+                    const targetModal = document.getElementById(targetId);
+                    if (targetModal) {
+                        showModal(targetModal);
+                    }
+                });
+            });
+
+            modals.forEach(modal => {
+                modal.addEventListener('click', (e) => {
+                    if (e.target.dataset.dismiss === 'modal' || e.target.closest('[data-dismiss="modal"]')) {
+                        hideModal(modal);
+                    }
+                });
+            });
+
+            function showModal(modal) {
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                setTimeout(() => {
+                    modal.querySelector('.modal-content-container').classList.remove('scale-95', 'opacity-0');
+                    modal.querySelector('.modal-content-container').classList.add('scale-100', 'opacity-100');
+                }, 10);
+            }
+
+            function hideModal(modal) {
+                modal.querySelector('.modal-content-container').classList.remove('scale-100', 'opacity-100');
+                modal.querySelector('.modal-content-container').classList.add('scale-95', 'opacity-0');
+                setTimeout(() => {
+                    modal.classList.remove('flex');
+                    modal.classList.add('hidden');
+                }, 300); // Match transition duration
+            }
+        });
+    </script>
+</body>
+</html>
